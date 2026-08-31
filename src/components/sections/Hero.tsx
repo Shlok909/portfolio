@@ -26,8 +26,13 @@ export default function Hero() {
       aria-label="Introduction"
       className="relative h-screen min-h-[640px] w-full overflow-hidden bg-black"
     >
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 bg-[url('/mobile_view.png')] bg-cover bg-[position:35%_center] bg-no-repeat md:hidden"
+      />
+
       <video
-        className="absolute inset-0 h-full w-full object-cover object-[23%_center]"
+        className="absolute inset-0 hidden h-full w-full object-cover object-[23%_center] md:block"
         autoPlay
         muted
         loop
@@ -42,7 +47,7 @@ export default function Hero() {
         href="#about"
         onClick={handleKnowMoreClick}
         aria-label="Click to know more about Shlok Sane"
-        className="absolute left-[6%] top-[74%] z-10 h-[12%] w-[27%] cursor-pointer rounded-full transition-colors hover:bg-white/10 focus-visible:ring-4 focus-visible:ring-white focus-visible:ring-offset-4 focus-visible:ring-offset-transparent"
+        className="absolute left-0 top-[63.5%] z-10 h-[8%] w-[44%] cursor-pointer rounded-full transition-colors hover:bg-white/10 focus-visible:ring-4 focus-visible:ring-white focus-visible:ring-offset-4 focus-visible:ring-offset-transparent md:left-[6%] md:top-[74%] md:h-[12%] md:w-[27%]"
       >
         <span className="sr-only">Click to know more</span>
       </a>
